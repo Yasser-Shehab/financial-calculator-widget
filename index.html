@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="input-wrapper">
+        <h4 class="form__title">Calculate your Rewards</h4>
+        <div class="input-field">
+          <label> Vendor/Bills </label>
+          <input id="vendor" type="number" placeholder="Enter a number" />
+        </div>
+        <div class="input-field">
+          <label> Medical/Ad Spend </label>
+          <input id="medical" type="number" placeholder="Enter a number" />
+        </div>
+        <div class="input-field">
+          <label> Corp.Spend </label> <input id="corp" type="number" placeholder="Enter a number" />
+        </div>
+        <div class="input-field">
+          <label> Team Project </label>
+          <input id="teamProject" type="number" placeholder="Enter a number" />
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <h2 class="brand__title">Compare your Rewards</h2>
+      <div class="brands-wrapper">
+        <div class="brand-card">
+          <p>Brex</p>
+        </div>
+        <div class="brand-card">
+          <p>Stripe</p>
+        </div>
+        <div class="brand-card">
+          <p>Amex</p>
+        </div>
+      </div>
+    </div>
+    <div class="container business-card-section">
+      <div class="business-card-name"><h3>Amex Business Card</h3></div>
+      <div class="brand-progress-bar"></div>
+      <span>$4000</span>
+    </div>
+    <div class="container flex">
+      <div class="rewards-wrapper">
+        <div class="image-wrapper">
+          <img src="./assets/images/card.png" alt="card" />
+        </div>
+        <div class="reward-type">
+          <h4>Unlimited Rewards</h4>
+          <h3>LIFETIME REWARDS</h3>
+        </div>
+      </div>
+      <div class="progress-bar-wrapper">
+        <div class="progress-group reward--unlimited">
+          <div class="reward-progress-bar"></div>
+          <p>$56,000,23</p>
+        </div>
+        <div class="progress-group">
+          <div class="reward-progress-bar reward--lifetime"></div>
+          <p>$1,685,547</p>
+        </div>
+      </div>
+    </div>
+
+    <script defer src="./js/script.js"></script>
+  </body>
+</html>
