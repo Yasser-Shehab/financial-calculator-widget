@@ -28,27 +28,28 @@ const brandRatio = {
 inputs.forEach((input) => {
   input.addEventListener("keyup", () => {
     inputValues[input.id] = parseInt(input.value);
-    console.log(inputValues);
     checkinputs();
   });
 });
 
-//!Check Inputs for Wrong data
+//!Check Inputs for Wrong data and Do calculations
 const checkinputs = () => {
   let checkForSymbols = true;
-  let AllNumbers = true;
+  let AllNumbers = false;
   for (const [key, value] of Object.entries(inputValues)) {
     if (isNaN(value)) {
       checkForSymbols = false;
     }
-    if (typeof value != "number") {
+    if (typeof value !== "number" || isNaN(value)) {
       AllNumbers = false;
+    } else {
+      AllNumbers = true;
     }
   }
-
   if (checkForSymbols) {
     error.style.display = "none";
   } else {
+    calculationResult.style.display = "none";
     error.style.display = "block";
   }
   if (AllNumbers) {
@@ -58,6 +59,8 @@ const checkinputs = () => {
     unlimited.textContent = `$ ${numberWithComma(Math.round(getSum() * 1.1))}`;
     lifetime.textContent = `$ ${numberWithComma(Math.round(getSum() * 1.2))}`;
     calculationResult.style.display = "block";
+  } else {
+    calculationResult.style.display = "none";
   }
 };
 
@@ -77,7 +80,6 @@ const numberWithComma = (number) => {
 brands.forEach((brand) => {
   brand.addEventListener("click", () => {
     selectedBrand = brand.id;
-    console.log(typeof selectedBrand);
     brandCardName.textContent = `${capitalizeFirst(selectedBrand)} Business Card`;
     brandCardValue.textContent = `$ ${numberWithComma(
       Math.round(getSum() * brandRatio[selectedBrand])

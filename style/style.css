@@ -54,6 +54,12 @@ html {
 .input-field {
   padding: 0.5rem;
   font-size: 2rem;
+  border: 1px solid #adadad;
+  border-radius: 7px;
+}
+input:focus {
+  border: 1px solid var(--pogress-color-active);
+  outline: none;
 }
 .input-group {
   margin-top: 2rem;
@@ -191,7 +197,7 @@ html {
 }
 
 .reward-progress-bar {
-  width: 100px;
+  width: 60px;
   height: 23px;
   border-bottom-right-radius: 5px;
   border-top-right-radius: 5px;
@@ -204,7 +210,7 @@ html {
 }
 
 .reward--lifetime {
-  width: 120px;
+  width: 70px;
   height: 23px;
   background-color: var(--pogress-color-active);
 }
@@ -217,6 +223,7 @@ html {
   display: none;
   color: red;
   margin-top: 2rem;
+  font-size: 2rem;
 }
 
 .calculations-result {
