@@ -3,6 +3,7 @@
   --secondary-color: #4c8bde;
   --progress-color: #8dd4ef;
   --pogress-color-active: #0987ee;
+  --value-color: #707071;
 }
 
 * {
@@ -18,19 +19,26 @@ body {
 html {
   font-size: 62.5%;
 }
+.app-wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
 
 .flex {
   display: flex;
 }
 .container {
-  width: fit-content;
-  margin: 5rem auto;
+  margin-bottom: 5rem;
 }
 
 .form__title {
   text-align: center;
   color: var(--title-color);
-  font-size: 2rem;
+  font-size: 3.5rem;
 }
 
 .input-wrapper {
@@ -44,16 +52,20 @@ html {
 }
 
 .input-field {
+  padding: 0.5rem;
+  font-size: 2rem;
+}
+.input-group {
   margin-top: 2rem;
 }
-.input-field input::placeholder {
+.input-group input::placeholder {
   text-align: center;
 }
-.input-field label {
+.input-group label {
   display: inline-block;
-  width: 100px;
+  width: 200px;
   color: #4c8bde;
-  /* margin-right: 1rem; */
+  font-size: 2rem;
   text-align: left;
 }
 
@@ -61,6 +73,7 @@ html {
 
 .brand__title {
   text-align: center;
+  font-size: 2.5rem;
   color: var(--title-color);
 }
 
@@ -81,28 +94,45 @@ html {
 .brand-card p {
   color: #797979;
   font-style: italic;
+  font-size: 2rem;
 }
 
 .business-card-section {
-  display: flex;
+  display: none;
   align-items: center;
+  margin-top: -2rem;
 }
 .business-card-section span {
   margin-left: 1rem;
   font-size: 1.2rem;
 }
 
+#brand-business-card {
+  text-align: center;
+  font-size: 1.6rem;
+  padding: 0.5rem 0;
+}
+
 .brand-progress-bar {
   width: 100px;
-  height: 15px;
-  margin-left: 1rem;
+  height: 23px;
   border-bottom-right-radius: 5px;
   border-top-right-radius: 5px;
   background-color: var(--progress-color);
 }
+#brand-card-value {
+  font-size: 2.5rem;
+  color: var(--value-color);
+}
 
 .business-card-name {
   color: var(--secondary-color);
+  border: 2px solid #adadad;
+  border-radius: 5px;
+  padding: 1rem;
+}
+.business-card-name h3 {
+  font-size: 1.5rem;
 }
 
 /* Rewards Style */
@@ -113,9 +143,12 @@ html {
   border: 2px solid #adadad;
   gap: 2rem;
 }
+.min-width {
+  min-width: 350px;
+}
 
 .image-wrapper {
-  width: 100px;
+  width: 120px;
 }
 
 .image-wrapper img {
@@ -126,6 +159,7 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  font-size: 1.5rem;
 }
 
 .reward-type h4 {
@@ -133,6 +167,10 @@ html {
 }
 .reward-type h3 {
   color: #3177d2;
+}
+
+.rewards-section {
+  margin-top: -2rem;
 }
 
 .progress-bar-wrapper {
@@ -149,23 +187,38 @@ html {
 
 .progress-group p {
   margin-left: 1rem;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .reward-progress-bar {
-  width: 150px;
-  height: 15px;
+  width: 100px;
+  height: 23px;
   border-bottom-right-radius: 5px;
   border-top-right-radius: 5px;
   background-color: var(--progress-color);
 }
 
 .reward--unlimited p {
-  font-size: 1.3rem;
+  font-size: 2.3rem;
+  color: var(--value-color);
 }
 
 .reward--lifetime {
-  width: 200px;
-  height: 20px;
+  width: 120px;
+  height: 23px;
   background-color: var(--pogress-color-active);
+}
+#lifetime {
+  font-size: 3rem;
+  color: var(--value-color);
+}
+
+.error {
+  display: none;
+  color: red;
+  margin-top: 2rem;
+}
+
+.calculations-result {
+  display: none;
 }

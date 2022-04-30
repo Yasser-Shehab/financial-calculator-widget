@@ -8,63 +8,77 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="container">
-      <div class="input-wrapper">
-        <h4 class="form__title">Calculate your Rewards</h4>
-        <div class="input-field">
-          <label> Vendor/Bills </label>
-          <input id="vendor" type="number" placeholder="Enter a number" />
-        </div>
-        <div class="input-field">
-          <label> Medical/Ad Spend </label>
-          <input id="medical" type="number" placeholder="Enter a number" />
-        </div>
-        <div class="input-field">
-          <label> Corp.Spend </label> <input id="corp" type="number" placeholder="Enter a number" />
-        </div>
-        <div class="input-field">
-          <label> Team Project </label>
-          <input id="teamProject" type="number" placeholder="Enter a number" />
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <h2 class="brand__title">Compare your Rewards</h2>
-      <div class="brands-wrapper">
-        <div class="brand-card">
-          <p>Brex</p>
-        </div>
-        <div class="brand-card">
-          <p>Stripe</p>
-        </div>
-        <div class="brand-card">
-          <p>Amex</p>
+    <div class="app-wrapper">
+      <div class="container">
+        <div class="input-wrapper">
+          <h4 class="form__title">Calculate your Rewards</h4>
+          <div class="input-group">
+            <label> Vendor/Bills </label>
+            <input class="input-field" id="vendor" type="number" placeholder="Enter a number" />
+          </div>
+          <div class="input-group">
+            <label> Medical/Ad Spend </label>
+            <input class="input-field" id="medical" type="number" placeholder="Enter a number" />
+          </div>
+          <div class="input-group">
+            <label> Corp.Spend </label>
+            <input class="input-field" id="corp" type="number" placeholder="Enter a number" />
+          </div>
+          <div class="input-group">
+            <label> Team Project </label>
+            <input
+              class="input-field"
+              id="teamProject"
+              type="number"
+              placeholder="Enter a number"
+            />
+          </div>
+          <span class="error">All input fields must be numbers.</span>
         </div>
       </div>
-    </div>
-    <div class="container business-card-section">
-      <div class="business-card-name"><h3>Amex Business Card</h3></div>
-      <div class="brand-progress-bar"></div>
-      <span>$4000</span>
-    </div>
-    <div class="container flex">
-      <div class="rewards-wrapper">
-        <div class="image-wrapper">
-          <img src="./assets/images/card.png" alt="card" />
+      <div class="calculations-result">
+        <div class="container">
+          <h2 class="brand__title">Select Brand to Compare your Rewards</h2>
+          <div class="brands-wrapper">
+            <div id="brex" class="brand-card">
+              <p>Brex</p>
+            </div>
+            <div id="stripe" class="brand-card">
+              <p>Stripe</p>
+            </div>
+            <div id="amex" class="brand-card">
+              <p>Amex</p>
+            </div>
+          </div>
         </div>
-        <div class="reward-type">
-          <h4>Unlimited Rewards</h4>
-          <h3>LIFETIME REWARDS</h3>
+        <div class="container business-card-section">
+          <div class="business-card-name min-width">
+            <h3 id="brand-business-card">Amex Business Card</h3>
+          </div>
+          <div class="brand-progress-bar"></div>
+          <span id="brand-card-value">$0</span>
         </div>
-      </div>
-      <div class="progress-bar-wrapper">
-        <div class="progress-group reward--unlimited">
-          <div class="reward-progress-bar"></div>
-          <p>$56,000,23</p>
-        </div>
-        <div class="progress-group">
-          <div class="reward-progress-bar reward--lifetime"></div>
-          <p>$1,685,547</p>
+
+        <div class="container flex rewards-section">
+          <div class="rewards-wrapper min-width">
+            <div class="image-wrapper">
+              <img src="./assets/images/card.png" alt="card" />
+            </div>
+            <div class="reward-type">
+              <h4>Unlimited Rewards</h4>
+              <h3>LIFETIME REWARDS</h3>
+            </div>
+          </div>
+          <div class="progress-bar-wrapper">
+            <div class="progress-group reward--unlimited">
+              <div class="reward-progress-bar"></div>
+              <p id="unlimited">$0</p>
+            </div>
+            <div class="progress-group">
+              <div class="reward-progress-bar reward--lifetime"></div>
+              <p id="lifetime">$0</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
